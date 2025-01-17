@@ -1,0 +1,160 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.sidebar {
+    flex: 1;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.sidebar h2 {
+    margin-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 5px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.main-content {
+    flex: 3;
+    padding: 20px;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product {
+    border: 1px solid #ddd;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.product h3 {
+    margin-top: 0;
+}
+
+.product p {
+    margin-bottom: 10px;
+}
+
+.product p:last-child {
+    margin-bottom: 0;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+.product-list{
+    /* border: 1px solid #fc0000; */
+}
+
+.pro1{
+    /* display: flex; */
+    width: 264px;
+    height: 325px;
+    /* border: 1px solid blue; */
+}
+.aa{
+    width: 100%;
+    height: 226px;
+
+}
+.aa img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.bb{
+    width: 100%;
+    height: calc(100% - 226px);
+    /* border: 1px solid #000; */
+}
+.bbfirst{
+    margin-top: 10px;
+    width: 100%;
+    /* height: 50%; */
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 5px;
+    /* border: 1.8px solid rgb(3, 36, 254); */
+}
+
+.sidec{
+    padding: 3px;
+}
+
+.sidec:hover a{
+    color: #fff;
+    transition: 0.3ms all ease;
+}
+
+.sidec:hover{
+    color: #ffffff;
+    background-color: #707070;
+    transition: 0.3ms all ease;
+}
+
+.profuctheasder{
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.as {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+    transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.as:hover {
+    border-color: #007bff;
+}
+
+.as:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.as option {
+    background-color: #fff;
+    color: #333;
+}
+
+.as option:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.as option:checked {
+    background-color: #007bff;
+    color: #fff;
+}
