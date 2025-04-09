@@ -46,7 +46,7 @@ textarea {
   width: 100%;
   min-height: 100vh;
   padding: 2rem;
-  background-color: #fafafa;
+  background-color:rgb(29, 27, 27);
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -203,7 +203,7 @@ textarea.input {
   opacity: 0;
   transition: 0.3s;
   height: 5px;
-  background-color: #fff;
+  background-color: black;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -232,6 +232,7 @@ textarea.input {
 .contact-info {
   padding: 2.3rem 2.2rem;
   position: relative;
+  background-color: gainsboro;
 }
 
 .contact-info .title {
@@ -246,13 +247,14 @@ textarea.input {
 .information {
   display: flex;
   color: #555;
+  
   margin: 0.7rem 0;
   align-items: center;
   font-size: 0.95rem;
 }
 
 .information i {
-  color: #000;
+  color: black;
 }
 
 .icon {
@@ -277,7 +279,7 @@ textarea.input {
   width: 35px;
   height: 35px;
   border-radius: 5px;
-  background: linear-gradient(45deg, #000, #149279);
+  background: linear-gradient(45deg, #000,rgb(106, 214, 194));
   color: #fff;
   text-align: center;
   line-height: 35px;
@@ -294,11 +296,12 @@ textarea.input {
   position: absolute;
   width: 110px;
   height: 100px;
-  border: 22px solid #d1d8d6;
+  border: 22px solidrgb(12, 12, 12);
   border-radius: 50%;
   bottom: -77px;
   right: 50px;
   opacity: 0.3;
+  background-color: #555;
 }
 
 .big-circle {
@@ -306,7 +309,7 @@ textarea.input {
   width: 500px;
   height: 500px;
   border-radius: 50%;
-  background: linear-gradient(to bottom, #e1ebe9, #d1d8d6);
+  background: linear-gradient(to bottom,rgb(45, 49, 48),rgb(50, 52, 51));
   bottom: 50%;
   right: 50%;
   transform: translate(-40%, 38%);
@@ -317,7 +320,7 @@ textarea.input {
   position: absolute;
   width: 360px;
   height: 360px;
-  background-color: #fafafa;
+  background-color:rgb(68, 66, 66);
   border-radius: 50%;
   top: calc(50% - 180px);
   left: calc(50% - 180px);
@@ -417,6 +420,69 @@ textarea.input {
     padding: 0.45rem 1.2rem;
   }
 }
+
+.third {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+}
+
+.andermenu {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  width: 260px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  display: none;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.profile-container:hover .andermenu {
+  display: block;
+}
+
+.naa {
+  padding: 12px 16px;
+  background-color: #f0f2f5;
+  border-bottom: 1px solid #ddd;
+}
+
+.naa p:first-child {
+  margin: 0;
+  font-weight: 600;
+  color: #333;
+}
+
+.naa p:last-child {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.onea {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  transition: background-color 0.3s ease;
+  background-color: #fff;
+}
+
+.onea:hover {
+  background-color: #f9dada;
+}
+
+.onea a {
+  text-decoration: none;
+  color: #f44336;
+  font-weight: 600;
+  font-size: 16px;
+}
+
 
         </style>
   </head>
