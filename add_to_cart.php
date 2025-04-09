@@ -140,7 +140,7 @@ if (isset($_SESSION['email'])) {
                                 echo '<input type="hidden" name="name" value="' . $row1['name'] . '">';
                                 echo '<input type="hidden" name="productId" value="' . $productId . '">';
                                 echo '<input type="hidden" name="email" value="' . $email . '">';
-                                echo '<button type="submit" style="margin-top: 20px; margin-bottom: 7px; padding: 10px 40px; font-size: 18px;">Buy</button>';
+                                echo '<button type="submit" class="add-product-btn" style="margin-top: 20px; margin-bottom: 7px; padding: 10px 40px; font-size: 18px;">Buy</button>';
                                 echo '</form>';
 
                             }
