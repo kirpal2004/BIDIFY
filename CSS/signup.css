@@ -1,11 +1,17 @@
-
-
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f8f9fa;
+    background-color: #3b3c3c;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {
@@ -17,16 +23,19 @@ body {
 
 .signup-form {
     width: 400px;
-    background-color: #fff;
-    border-radius: 8px;
+    background-color: #141313;
+    border-radius: 15px;
     padding: 40px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+    color: #d9dfe6;
+    transition: all 0.3s ease-in-out;
 }
 
 .signup-form h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-size: 26px;
+    margin-bottom: 25px;
     text-align: center;
+    color: #ffffff;
 }
 
 .form-group {
@@ -35,19 +44,30 @@ body {
 
 .form-control {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     border: 1px solid #ced4da;
-    border-radius: 5px;
+    border-radius: 8px;
+    background-color: #1e1e1e;
+    color: #ffffff;
+    outline: none;
+    transition: border 0.3s;
+}
+
+.form-control:focus {
+    border-color: #007bff;
 }
 
 .btn-primary {
     background-color: #007bff;
     color: #fff;
     border: none;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 12px;
+    border-radius: 25px;
     cursor: pointer;
     width: 100%;
+    font-size: 15px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
 }
 
 .btn-primary:hover {
@@ -56,13 +76,27 @@ body {
 
 .text-center {
     text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
 }
 
 .text-center a {
-    color: #007bff;
+    color: #2b82ce;
     text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
 .text-center a:hover {
-    text-decoration: underline;
+    color: #20ca34;
+}
+
+
+/* Mobile Responsive */
+
+@media (max-width: 480px) {
+    .signup-form {
+        width: 90%;
+        padding: 30px;
+    }
 }
