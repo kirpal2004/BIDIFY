@@ -15,168 +15,186 @@
 
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
-      * {
-        font-family: "Poppins", sans-serif;
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
 
-      body {
-        font-family: Arial, sans-serif;
-      }
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-      .container_nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        background-color: #f5f5f7;
-        padding: 10px 90px;
-      }
+body {
+  font-family: Arial, sans-serif;
+  background-color: grey;
+  color:rgb(13, 12, 12);
+}
 
-      .logo {
-        width: 35px; /* Set width of the image */
-        height: auto; /* Maintain aspect ratio */
-        margin-right: 10px;
-      }
+.container_nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color:rgb(129, 124, 124);
+  padding: 10px 90px;
+  border-bottom: 1px solid #333;
+}
 
-      .nav-list {
-        list-style-type: none;
-        margin: 0;
-        display: flex;
-        gap: 25px;
-        padding: 0;
-        display: flex;
-      }
+.logo {
+  width: 35px;
+  height: auto;
+  margin-right: 10px;
+}
 
-      .nav-item {
-        margin-right: 15px;
-      }
+.nav-list {
+  list-style-type: none;
+  display: flex;
+  gap: 25px;
+}
 
-      .nav-link {
-        text-decoration: none;
-        font-weight: 500;
-        font-size: 18px;
-        color: #333;
-        transition: color 0.3s;
-      }
+.nav-item {
+  margin-right: 15px;
+}
 
-      .nav-link:hover {
-        color: #555;
-      }
+.nav-link {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+  color: #f5f5f5;
+  transition: color 0.3s;
+}
 
-      .logout-link {
-        text-decoration: none;
-        color: #333;
-        font-weight: bold;
-      }
+.nav-link:hover {
+  color: #00bcd4;
+}
 
-      .logout-link:hover {
-        color: #555;
-      }
+.logout-link {
+  text-decoration: none;
+  color: #f5f5f5;
+  font-weight: bold;
+}
 
-      .log_outb {
-        padding: 7px 15px;
-        background-color: #007bff;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 16px;
-        transition: background-color 0.3s ease;
-      }
+.logout-link:hover {
+  color: #ff4444;
+}
 
-      .log_outb:hover {
-        background-color: #0056b3;
-      }
+.log_outb {
+  padding: 7px 15px;
+  background-color: #00bcd4;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
 
-      .profilephoto {
-        width: 35px;
-        height: 35px;
-        object-fit: cover;
-        cursor: pointer;
-        mix-blend-mode: multiply;
-        border-radius: 50%;
-      }
+.log_outb:hover {
+  background-color: #0097a7;
+}
 
-      .andermenu {
-        /* border: 1px solid #000; */
-        width: 16vw;
-        position: absolute;
-        top: 50px;
-        right: 0;
-        min-width: 240px;
-        min-height: 250px;
-        border-radius: 5px;
-        background-color: #fff;
-        height: 45vh;
-        margin-left: 50px;
-        overflow: hidden;
-        display: none;
-      }
+.profilephoto {
+  width: 35px;
+  height: 35px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  transition: transform 0.3s ease;
+}
 
-      .naa {
-        margin: 12px 16px;
-      }
+.profilephoto:hover {
+  transform: scale(1.05);
+}
 
-      .onea {
-        margin: 8px 16px;
-        display: flex;
-        gap: 8px;
-        align-items: center;
-      }
+.andermenu {
+  width: 240px;
+  position: absolute;
+  top: 50px;
+  right: 10px;
+  background-color: white;
+  border-radius: 8px;
+  height: auto;
+  display: none;
+  flex-direction: column;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
 
-      .ri-logout-box-r-line {
-        color: red;
-      }
+.profile-container:hover .andermenu {
+  display: flex;
+}
 
-      .onea a {
-        text-decoration: none;
-        color: black;
-      }
+.naa {
+  margin-bottom: 10px;
+}
 
-      .profile-container:hover .andermenu {
-        display: block;
-        cursor: pointer;
-        z-index: 1;
-      }
-      .onea:hover {
-        padding: 2px 4.5px;
-        transition: padding 0.3s, background-color 0.3s;
-        background-color: #dadada;
-      }
-      .first {
-        display: flex;
-        align-items: center;
-      }
-      .third {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        justify-content: center;
-      }
-      .ri-menu-3-line {
-        display: none;
-      }
+.naa p {
+  color: black;
+  font-weight: 500;
+}
 
-      @media (max-width: 768px) {
-        .nav-list {
-          display: none;
-        }
+.onea {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
 
-        .ri-menu-3-line {
-          display: block;
-          font-size: 28px;
-        }
-        .container_nav {
-          padding: 10px 10px;
-        }
+.onea:hover {
+  background-color: #333;
+}
 
-        .andermenu {
-          z-index: 10;
-          position: absolute;
-        }
-      }
+.ri-logout-box-r-line {
+  color: #ff4c4c;
+}
+
+.onea a {
+  text-decoration: none;
+  color: #ff4c4c;
+  font-weight: 500;
+}
+
+.first {
+  display: flex;
+  align-items: center;
+}
+
+.third {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+
+.ri-menu-3-line {
+  display: none;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .nav-list {
+    display: none;
+  }
+
+  .ri-menu-3-line {
+    display: block;
+    font-size: 28px;
+  }
+
+  .container_nav {
+    padding: 10px 20px;
+  }
+
+  .andermenu {
+    width: 90%;
+    top: 60px;
+    right: 5%;
+  }
+}
+
     </style>
   </head>
   <body>
@@ -223,5 +241,3 @@
     </div>
   </body>
 </html>
-
-
