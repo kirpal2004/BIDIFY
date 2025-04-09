@@ -7,12 +7,21 @@ if (isset($_GET['id'])) {
     $productId = $_GET['id'];
     $sql_product = "SELECT * FROM products WHERE id = '$productId'";
     $result_product = mysqli_query($conn, $sql_product);
-    $row = mysqli_fetch_assoc($result_product);
-    echo '<title>' . $row['name'] . '</title>';
+
+    if ($result_product && mysqli_num_rows($result_product) > 0) {
+        $row = mysqli_fetch_assoc($result_product);
+        echo '<title>' . htmlspecialchars($row['name']) . '</title>';
+    } else {
+        echo '<title>Product Not Found</title>';
+        echo '<div style="text-align:center; margin-top:50px; font-size:20px; color:red;">Product not found. Please check the link or try again.</div>';
+        include 'partial/footer.php';
+        exit();
+    }
 } else {
     echo '<title>Product Details</title>';
 }
 ?>
+
 <div style="text-align: center; margin-top: 20px;">
     <a href="#live-auction" class="join-auction-button" style="
         background-color: #ff4d4d;
