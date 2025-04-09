@@ -1,65 +1,74 @@
-/* Form container */
-.whole>form {
-    width: 600px;
-    margin: auto;
-    margin-top: 50px;
-    margin-bottom: 100px;
-    padding: 50px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  /* Form labels */
-  .whole>form label {
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  /* Form inputs */
-  .whole>form input[type='text'],
-  .whole>form input[type='email'] {
-    width: calc(100% - 12px);
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  /* Submit button */
-  .whole>form button {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .whole>form button:hover {
-    background-color: #0056b3;
-  }
+/* Page Wrapper */
 
-  .whole{
+.whole {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: space-around; */
-    /* margin-top: 100px; */
-    
-  }
+    padding: 20px;
+}
 
-  .col{
-    margin: auto;
-    margin-top: -20px;
+
+/* Form Container */
+
+#paymentForm {
+    width: 100%;
+    max-width: 600px;
+    background-color: #1e1e1e;
+    padding: 40px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.05);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    max-width: 340px;
-  }
+    gap: 16px;
+}
 
-  .add1{
-    margin-top: 20px;
-    font-size: 36px;
-    font-weight: bold;
-  }
+
+/* Labels */
+
+#paymentForm label {
+    color: #f0f0f0;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+/* Inputs */
+
+#paymentForm input[type='text'] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 6px;
+    background-color: #2a2a2a;
+    color: #fff;
+    font-size: 16px;
+}
+
+
+/* Input Focus */
+
+#paymentForm input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.5);
+}
+
+
+/* Submit Button */
+
+#paymentForm .buynow {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#paymentForm .buynow:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
