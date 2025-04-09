@@ -146,104 +146,144 @@ mysqli_close($conn);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        /* CSS for Product List */
+body {
+  background-color:rgb(114, 113, 113);
+  color: #f1f1f1;
+  font-family: 'Poppins', sans-serif;
+}
+
+.profuctheasder {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color:rgb(76, 75, 75);
+  padding: 20px;
+  border-radius: 10px;
+  color: #f5f5f5;
+  margin: 20px 0;
+}
+
+.profuctheasder h1 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.profuctheasder .as {
+  padding: 8px 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.profuctheasder .as:hover {
+  border-color: #007bff;
+  background-color: #f1f1f1;
+}
+
+
 table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
+  width: 100%;
+  border-collapse: collapse;
+  background-color:rgb(81, 79, 79);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  overflow: hidden;
+  border-color: #00d4ff;
 }
 
 th, td {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #2e2e2e;
+  transition: background-color 0.3s;
 }
 
 th {
-    background-color: #f2f2f2;
+  background-color:rgb(81, 79, 79);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+td {
+  background-color:rgb(71, 70, 70);
+  color: #e0e0e0;
+}
+
+tr:hover td {
+  background-color: #2a2a2a;
 }
 
 img {
-    height: 80px;
-    width: auto;
-}
-.profuctheasder{
-    margin: 25px;
-    display: flex;
-    justify-content: space-between;
-}
-.as {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #fff;
-    color: #333;
-    font-size: 16px;
-    cursor: pointer;
-    transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
 }
 
-.as:hover {
-    border-color: #007bff;
+img:hover {
+  transform: scale(1.1);
 }
 
-.as:focus {
-    outline: none;
-    border-color: #007bff;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.as option {
-    background-color: #fff;
-    color: #333;
+button.delete-btn {
+  background-color: #ff4d4f;
+  color: white;
 }
 
-.as option:hover {
-    background-color: #007bff;
-    color: #fff;
+button.delete-btn:hover {
+  background-color: #d9363e;
+  transform: scale(1.05);
 }
 
-.as option:checked {
-    background-color: #007bff;
-    color: #fff;
-}
-.center {
-    text-align: center;
+button.pay-btn {
+  background-color: #28a745;
+  color: white;
 }
 
-.pay-button {
-    padding: 5px 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-}
-.delete-button {
-    padding: 5px 10px;
-    background-color: red;
-    color: white;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
+button.pay-btn:hover {
+  background-color: #218838;
+  transform: scale(1.05);
 }
 
-.pay-button:hover {
-    background-color: #45a049;
-}
-.delete-button:hover {
-    background-color: #45a049;
+.status-sold {
+  font-weight: bold;
+  color: #ffcc00;
+  text-shadow: 0 0 6px #ffcc00;
 }
 
-.payment-done {
-    color: #4CAF50;
-    font-weight: bold;
+.status-ongoing {
+  color: #00d4ff;
+  font-weight: bold;
+  text-shadow: 0 0 6px #00d4ff;
 }
-.notdel {
-    text-align:center;
-    color: red;
-    font-weight: bold;
+
+select {
+  padding: 8px;
+  border-radius: 5px;
+  background-color: #292929;
+  color: #ffffff;
+  border: 1px solid #444;
 }
+
+select:hover {
+  background-color: #333;
+}
+
+.profuct
 
     </style>
 </head>
